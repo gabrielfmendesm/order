@@ -2,7 +2,6 @@ package store.order;
 
 import java.util.Date;
 import java.util.List;
-
 import lombok.Builder;
 import lombok.experimental.Accessors;
 
@@ -10,6 +9,6 @@ import lombok.experimental.Accessors;
 public record OrderOut(
     String id,
     Date date,
-    List<ItemOut> itens,
+    List<OrderItemOut> items,
     Double total
 ) {}

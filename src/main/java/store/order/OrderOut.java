@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 @Builder @Accessors(fluent = true)
 public record OrderOut(
     String id,
-    Date date,
+    String date,
     List<OrderItemOut> items,
     Double total
 ) {}

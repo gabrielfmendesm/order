@@ -11,24 +11,19 @@ public interface OrderController {
 
     @PostMapping
     ResponseEntity<OrderOut> create(
-        @RequestHeader("id-account") String idAccount,
         @RequestBody OrderIn orderIn
     );
 
     @GetMapping
-    ResponseEntity<List<OrderOut>> findAll(
-        @RequestHeader("id-account") String idAccount
-    );
+    ResponseEntity<List<OrderOut>> findAll();
 
     @GetMapping("/{id}")
     ResponseEntity<OrderOut> findById(
-        @RequestHeader("id-account") String idAccount,
         @PathVariable String id
     );
 
     @DeleteMapping("/{id}")
     ResponseEntity<Void> delete(
-        @RequestHeader("id-account") String idAccount,
         @PathVariable String id
     );
 
